@@ -65,7 +65,7 @@ const AiQuestions = ({ sessionId }) => {
 
   return (
     <LayoutGroup>
-      <div className="d-flex flex-column align-items-center gap-4">
+      <div className="d-flex flex-column align-items-center gap-4 w-100">
         {questions.length === 0 ? (
           <p className="text-light text-center opacity-75">
             No AI questions yet. Click “Generate AI Questions” above.
@@ -91,7 +91,12 @@ const AiQuestions = ({ sessionId }) => {
                       <span className="flex-grow-1 fw-medium">
                         {item.question}
                       </span>
-                      <span onClick={(e) => { e.stopPropagation(); togglePin(item._id); }}>
+                      <span
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          togglePin(item._id);
+                        }}
+                      >
                         {item.isPinned ? (
                           <MdOutlinePushPin className="text-info fs-5" />
                         ) : (
@@ -99,7 +104,16 @@ const AiQuestions = ({ sessionId }) => {
                         )}
                       </span>
                     </AccordionTrigger>
-                    <AccordionContent className="bg-dark-subtle text-light rounded-3xl mt-2 p-3">
+
+                    {/* ✅ Clear readable answer box */}
+                    <AccordionContent
+                      className="bg-white text-dark rounded-3xl mt-2 p-4 border"
+                      style={{
+                        fontSize: "1rem",
+                        lineHeight: "1.6",
+                        fontWeight: 500,
+                      }}
+                    >
                       {item.answer}
                     </AccordionContent>
                   </AccordionItem>
