@@ -17,7 +17,7 @@ const AiQuestions = ({ sessionId }) => {
   // Fetch Questions
   const getQuestions = async () => {
     const res = await axios.get(
-      `http://localhost:5000/api/v1/question/getQuestions/${sessionId}`,
+      `https://ai-interview-coach-backend-581l.onrender.com/api/v1/question/getQuestions/${sessionId}`,
       {
         headers: { "Content-Type": "application/json" },
         withCredentials: true,
@@ -34,7 +34,7 @@ const AiQuestions = ({ sessionId }) => {
   // Toggle pin mutation
   const togglePinApi = async (id) => {
     const res = await axios.post(
-      `http://localhost:5000/api/v1/question/toggleQuestion/${id}`,
+      `https://ai-interview-coach-backend-581l.onrender.com/api/v1/question/toggleQuestion/${id}`,
       {},
       { withCredentials: true }
     );

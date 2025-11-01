@@ -26,7 +26,7 @@ const CreateSessionButton = () => {
   // ✅ Fetch sessions
   const getSession = async () => {
     const res = await axios.get(
-      "http://localhost:5000/api/v1/session/getMySession",
+      "https://ai-interview-coach-backend-581l.onrender.com/api/v1/session/getMySession",
       {
         headers: { "Content-Type": "application/json" },
         withCredentials: true,
@@ -43,7 +43,7 @@ const CreateSessionButton = () => {
   // ✅ Create session
   const createSessionApi = async () => {
     const res = await axios.post(
-      "http://localhost:5000/api/v1/session/createSession",
+      "https://ai-interview-coach-backend-581l.onrender.com/api/v1/session/createSession",
       form,
       {
         headers: { "Content-Type": "application/json" },
@@ -68,7 +68,7 @@ const CreateSessionButton = () => {
   // ✅ Delete session
   const deleteSessionApi = async (id) => {
     const res = await axios.delete(
-      `http://localhost:5000/api/v1/session/deleteMySession/${id}`,
+      `https://ai-interview-coach-backend-581l.onrender.com/api/v1/session/deleteMySession/${id}`,
       { withCredentials: true }
     );
     return res.data;

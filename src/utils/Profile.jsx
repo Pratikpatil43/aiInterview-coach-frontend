@@ -12,7 +12,7 @@ import UpdateProfile from "./UpdateProfile";
 
 const Profile = () => {
   const getProfile = async () => {
-    const res = await axios.get("http://localhost:5000/api/v1/user/getUser", {
+    const res = await axios.get("https://ai-interview-coach-backend-581l.onrender.com/api/v1/user/getUser", {
       headers: { "Content-Type": "application/json" },
       withCredentials: true,
     });

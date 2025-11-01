@@ -13,7 +13,7 @@ const SessionDetails = () => {
   // Fetch session details
   const getSessionDetail = async () => {
     const res = await axios.get(
-      `http://localhost:5000/api/v1/session/getMySessionById/${param.id}`,
+      `https://ai-interview-coach-backend-581l.onrender.com/api/v1/session/getMySessionById/${param.id}`,
       {
         headers: { "Content-Type": "application/json" },
         withCredentials: true,
@@ -30,7 +30,7 @@ const SessionDetails = () => {
   // Generate AI Questions mutation
   const GenerateAiQuestionApi = async (payload) => {
     const res = await axios.post(
-      "http://localhost:5000/api/v1/question/addQuestion",
+      "https://ai-interview-coach-backend-581l.onrender.com/api/v1/question/addQuestion",
       payload,
       {
         headers: { "Content-Type": "application/json" },
