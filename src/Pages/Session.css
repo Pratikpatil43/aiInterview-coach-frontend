@@ -1,0 +1,11 @@
+/* Make placeholders white in modal inputs */
+::placeholder {
+  color: rgba(255, 255, 255, 0.75) !important;
+  opacity: 1; /* Ensure consistent color across browsers */
+}
+
+/* For textarea placeholders too */
+textarea::placeholder {
+  color: rgba(255, 255, 255, 0.75) !important;
+  opacity: 1;
+}
